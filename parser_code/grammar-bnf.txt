@@ -1,0 +1,82 @@
+program' -> program
+program -> functions startprog
+functions -> function functions   
+functions -> ''
+startprog -> start ( ) { stmnts }
+stmnts -> stmnt stmnts 
+stmnts -> ''
+stmnt -> CondStmnt 
+stmnt -> LoopStmnt 
+stmnt -> DeclStmnt 
+stmnt -> AssignStmnt 
+stmnt -> FunctCall 
+stmnt -> RetStmnt 
+CondStmnt -> if ( expr ) { stmnts } else { stmnts } 
+CondStmnt -> if ( expr ) { stmnts }
+LoopStmnt -> while ( expr ) { stmnts }
+DeclStmnt -> DataType IdList ;
+DeclStmnt -> DataType id ;
+DeclStmnt -> DataType term ;
+IdList -> id , id IdListother
+IdListother -> , id IdListother
+IdListother -> ''
+AssignStmnt -> id = expr ; 
+expr -> arithemticOrBooleanexpr
+arithemticOrBooleanexpr -> any newexpr2
+newexpr2 -> logicalop any newexpr2
+newexpr2 -> ''
+any -> arithmeticexpr newexpr3
+newexpr3 -> relationalop arithmeticexpr
+newexpr3 -> ''
+arithmeticexpr -> term1 newexpr4
+newexpr4 -> plus term1 newexpr4
+newexpr4 -> minus term1 newexpr4
+newexpr4 -> ''
+term1 -> factor newexpr5
+newexpr5 -> mult factor newexpr5
+newexpr5 -> div factor newexpr5
+newexpr5 -> ''
+factor -> ( arithemticOrBooleanexpr )
+factor -> term
+factor -> id
+logicalop -> and
+logicalop -> or
+relationalop -> lt
+relationalop -> gt
+relationalop -> ne
+relationalop -> eq
+relationalop -> ge
+relationalop -> le 
+plus -> + 
+minus -> - 
+mult -> * 
+div -> /
+or -> |
+and -> &
+gt -> >
+lt -> <
+le -> <=
+eq -> ==
+ne -> <>
+ge -> >=
+FunctCall -> id ( ParamList ) ;
+RetStmnt -> return expr ;
+RetStmnt -> return ;
+function -> FuncDataType id ( arguments ) { stmnts }
+arguments -> argument , arguments 
+arguments -> argument 
+arguments -> ''
+argument -> DataType id 
+ParamList -> expr , ParamList
+ParamList -> expr
+ParamList -> ''
+term -> const 
+term -> id ( ParamList )
+DataType -> int 
+DataType -> float 
+DataType -> char
+const -> intType 
+const -> floatType 
+const -> charType
+FuncDataType -> void 
+FuncDataType -> DataType

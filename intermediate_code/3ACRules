@@ -1,0 +1,19 @@
+S' -> S ;
+S -> id = E
+E -> E + T
+E -> E - T
+E -> T
+T -> T * F
+T -> T / F
+T -> F
+F -> ( E )
+F -> id
+R -> id < id
+R -> id <= id
+R -> id > id
+R -> id >= id
+R -> id == id
+R -> id <> id
+S -> C
+C -> if ( R ) then S
+C -> if ( R ) then S else S
