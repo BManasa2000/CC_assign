@@ -1,0 +1,53 @@
+				#Hazelnut Code documentation
+
+Pre-defines arrays
+1. keywords - Contains all the keywords of our language Hazelnut .For example : return,void,main,etc.
+2. delimeters - Contains all the delimeters available to the users of the language Hazelnut.Ex: '(',')',etc..
+3. seperators - Contains all the seperators available for the users of the language Hazelnut. It is an array of delimeters + newline(\n),tab(\t),etc..
+4. operators - Contains all single character the arithmetic operators available for the users of the language Hazelnut. Ex: <,>,+,etc..
+5. twoCharOperators - Contains all the double character arithmetic operators available for the users of the language Hazelnut. Ex: <=,&&,etc..
+
+
+Functions and their utilities:
+1. readFile(input):	Used to open the input text file and read its contents.
+			Parameters passed: Input file which is text file.
+			Returns: code (in form of a string) which is basically the contents of the input file 
+
+2. writeFile(input):    Used to open the output text file and write content in it.
+			Parameters passed: File which is text file.
+			Returns: does not return anything.
+			
+3. isToken(lexeme): 	Returns the token for every lexeme by firstly checking for keyword, secondly for an already present entry in the LookUp Table.
+			Parameters passed: lexeme
+			Returns: String output that indicates type of token or error if it doesnt comply to the language rules.
+
+4. errorRecheck(lexeme,lineCount):	Checks for valid tokens that can be derived from a joint lexeme by parsing and prints the corresponding tokens.
+			Parameters passed: the lexeme and the Line count of the code.
+			Returns: does not return anything.		
+
+5. dfa(lexeme):		The implementation of the lexer done in the form of a dfa with states that have transitions as follows
+
+			|STATE|SYMBOL IN INPUT|NEXT STATE|
+			|0    |DIGIT	      |1         |
+			|     |SMALLLETTER    |4         |
+			|     |OTHER	      |5         |
+			|1    |DIGIT          |1         |
+			|     |DOT	      |2         |
+			|     |OTHER	      |5         |
+			|2    |DIGIT	      |3         |
+			|     |OTHER	      |5         |
+			|3    |DIGIT	      |3         |
+			|     |OTHER	      |5         |
+			|4    |DIGIT	      |4	 |
+			|     |LETTERS        |4         |
+			|     |UNDERSCORE     |4         |
+			|     |OTHER          |5         |
+			|5    |ERROR	      |-         |	
+
+			Parameters passed: the lexeme
+			Returns: type of token in the form of a string
+
+6. parser(code):
+			Parses the code and extracts the lexemes for further retrieval of corresponding tokens. It removes comments and is responsible for 				calling the isToken function.
+			Parameters passed: the code string
+			Returns: does not return anything

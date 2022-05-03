@@ -1,0 +1,35 @@
+Lexeme:int, Token:keyword, tokenValue:27, LineNumber:3
+Lexeme:main, Token:keyword, tokenValue:31, LineNumber:3
+Lexeme:(, Token:Delimiter, tokenValue:1, LineNumber:3
+Lexeme:), Token:Delimiter, tokenValue:2, LineNumber:3
+Lexeme:{, Token:Delimiter, tokenValue:3, LineNumber:3
+Lexeme:int, Token:keyword, tokenValue:27, LineNumber:4
+Lexeme:N lexical error
+Lexeme:umber, Token:identifier, tokenValue:35, LineNumber:4
+Lexeme:;, Token:Delimiter, tokenValue:5, LineNumber:4
+Lexeme:int, Token:keyword, tokenValue:27, LineNumber:5
+Lexeme:a, Token:identifier, tokenValue:35, LineNumber:5
+Lexeme:=, Token:Operator, tokenValue:12, LineNumber:5
+Lexeme:2, Token:integerLiteral, tokenValue:33, LineNumber:5
+Lexeme:. lexical error
+Lexeme:5, Token:integerLiteral, tokenValue:33, LineNumber:5
+Lexeme:b, Token:identifier, tokenValue:35, LineNumber:5
+Lexeme:;, Token:Delimiter, tokenValue:5, LineNumber:5
+Lexeme:pr, Token:identifier, tokenValue:35, LineNumber:6
+Lexeme:~ lexical error
+Lexeme:intf, Token:identifier, tokenValue:35, LineNumber:6
+Lexeme:(, Token:Delimiter, tokenValue:1, LineNumber:6
+Lexeme:"Enter an integer: ", Token:String, tokenValue:37, LineNumber:6
+Lexeme:), Token:Delimiter, tokenValue:2, LineNumber:6
+Lexeme:;, Token:Delimiter, tokenValue:5, LineNumber:6
+Lexeme:printf, Token:identifier, tokenValue:35, LineNumber:8
+Lexeme:(, Token:Delimiter, tokenValue:1, LineNumber:8
+Lexeme:"You entered: %d", Token:String, tokenValue:37, LineNumber:8
+Lexeme:,, Token:Delimiter, tokenValue:17, LineNumber:8
+Lexeme:number, Token:identifier, tokenValue:35, LineNumber:8
+Lexeme:), Token:Delimiter, tokenValue:2, LineNumber:8
+Lexeme:;, Token:Delimiter, tokenValue:5, LineNumber:8
+Lexeme:return, Token:keyword, tokenValue:29, LineNumber:10
+Lexeme:0, Token:integerLiteral, tokenValue:33, LineNumber:10
+Lexeme:;, Token:Delimiter, tokenValue:5, LineNumber:10
+Lexeme:}, Token:Delimiter, tokenValue:4, LineNumber:11

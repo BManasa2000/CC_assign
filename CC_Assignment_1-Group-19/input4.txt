@@ -1,0 +1,11 @@
+# Program showing errors (lexical)
+
+int main() {   
+    int Number;
+    int a=2.5b;
+    pr~intf("Enter an integer: ");  
+
+    printf("You entered: %d", number);
+    
+    return 0;
+}

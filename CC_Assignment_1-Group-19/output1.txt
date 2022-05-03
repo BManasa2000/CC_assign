@@ -1,0 +1,14 @@
+Lexeme:int, Token:keyword, tokenValue:27, LineNumber:2
+Lexeme:main, Token:keyword, tokenValue:31, LineNumber:2
+Lexeme:(, Token:Delimiter, tokenValue:1, LineNumber:2
+Lexeme:), Token:Delimiter, tokenValue:2, LineNumber:2
+Lexeme:{, Token:Delimiter, tokenValue:3, LineNumber:2
+Lexeme:printf, Token:identifier, tokenValue:35, LineNumber:4
+Lexeme:(, Token:Delimiter, tokenValue:1, LineNumber:4
+Lexeme:"Hello, World!", Token:String, tokenValue:37, LineNumber:4
+Lexeme:), Token:Delimiter, tokenValue:2, LineNumber:4
+Lexeme:;, Token:Delimiter, tokenValue:5, LineNumber:4
+Lexeme:return, Token:keyword, tokenValue:29, LineNumber:5
+Lexeme:0, Token:integerLiteral, tokenValue:33, LineNumber:5
+Lexeme:;, Token:Delimiter, tokenValue:5, LineNumber:5
+Lexeme:}, Token:Delimiter, tokenValue:4, LineNumber:6
